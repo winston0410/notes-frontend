@@ -39,10 +39,6 @@ https://html5sec.org/
 
 https://gist.github.com/kurobeats/9a613c9ab68914312cbb415134795b45
 
-- encoding
-- validation
-- CSP
-
 #### Encoding
 ```
 //Before
@@ -111,3 +107,7 @@ Prevent any data from leaking when users navigates away from your website.
 Use subresource integrity for checking if resources match
 
 https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
+
+#### X-Frame-Options
+
+X-Frame-Options prevents a website from being loaded in `<iframe>`
