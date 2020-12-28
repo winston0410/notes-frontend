@@ -81,3 +81,33 @@ default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style
 Use as HTTP header
 
 https://content-security-policy.com/
+
+The following points from here: https://konstantinlebedev.com/security-for-frontend/
+
+#### X-XSS-Protection
+
+Fallbacks for browser that doesn't support CSP, for example IE. (Default for modern browser, but good to have)
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
+
+#### Feature-Policy
+
+Disable unused features
+
+```
+"Feature-Policy": "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none';  picture-in-picture 'none'; speaker 'none'; sync-xhr 'none'; usb 'none'; vr 'none';"
+```
+
+#### Referrer-Policy
+
+Prevent any data from leaking when users navigates away from your website.
+
+```
+"Referrer-Policy": "no-referrer"
+```
+
+#### Subresource Integrity 
+
+Use subresource integrity for checking if resources match
+
+https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
